@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Acquisto MP3 - Queen</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1e1e1e, #3a3a3a);
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 40px;
+            color: gold;
+        }
+
+        img {
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px black;
+        }
+
+        table {
+            margin: 30px auto;
+            width: 60%;
+            font-size: 18px;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 60%;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px black;
+            text-align: left;
+        }
+
+        h2 {
+            color: gold;
+            border-bottom: 2px solid gold;
+            padding-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: gold;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: orange;
+            transform: scale(1.05);
+        }
+
+        #dati, #brani {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <img src="https://assets.culturabologna.it/c893c89e-c7d5-45de-8e3c-bfd387eb4dc3-15-luglio.jpg/658e92357ddaf83a37526e47323880e7e339b4c0.jpg" 
+        alt="Queen" width="300">
+        <h2>Ascolta Bohemian Rhapsody</h2>
+
+            <audio controls>
+                <source src="bohemian_first_15_seconds.mp3" type="audio/mpeg">
+                    Il tuo browser non supporta il tag audio.
+            </audio>
+
+
+    <h1>Elenco brani acquistabili</h1>
+
+    <table>
+        <tr><td>1</td><td>Death on Two Legs</td></tr>
+        <tr><td>2</td><td>Lazing on a Sunday Afternoon</td></tr>
+        <tr><td>3</td><td>I'm in Love with My Car</td></tr>
+        <tr><td>4</td><td>You're My Best Friend</td></tr>
+        <tr><td>5</td><td>'39</td></tr>
+        <tr><td>6</td><td>Sweet Lady</td></tr>
+        <tr><td>7</td><td>Seaside Rendezvous</td></tr>
+        <tr><td>8</td><td>The Prophet's Song</td></tr>
+        <tr><td>9</td><td>Love of My Life</td></tr>
+        <tr><td>10</td><td>Good Company</td></tr>
+        <tr><td>11</td><td>Bohemian Rhapsody</td></tr>
+        <tr><td>12</td><td>God Save the Queen</td></tr>
+        <tr><td>13</td><td>We Are the Champions</td></tr>
+        <tr><td>14</td><td>We Will Rock You</td></tr>
+    </table>
+
+    <form action="#" method="post">
+
+        <div id="dati">
+            <h2>Dati personali</h2>
+
+            Nome:
+            <input type="text" name="nome">
+
+            Indirizzo:
+            <input type="text" name="indirizzo">
+
+            CAP:
+            <input type="text" name="cap">
+
+            Città:
+            <input type="text" name="citta">
+
+            Email:
+            <input type="email" name="email">
+        </div>
+
+        <div id="brani">
+            <h2>Dati acquisto</h2>
+
+            Numero carta di credito:
+            <input type="text" name="carta">
+
+            Circuito carta:
+            <select name="circuito">
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="amex">American Express</option>
+            </select>
+
+            Codice di sicurezza:
+            <input type="text" name="cvv">
+
+            Brano da acquistare:
+            <select name="brano">
+                <option value="1">1 - Death on Two Legs</option>
+                <option value="2">2 - Lazing on a Sunday Afternoon</option>
+                <option value="3">3 - I'm in Love with My Car</option>
+                <option value="4">4 - You're My Best Friend</option>
+                <option value="5">5 - '39</option>
+                <option value="6">6 - Sweet Lady</option>
+                <option value="7">7 - Seaside Rendezvous</option>
+                <option value="8">8 - The Prophet's Song</option>
+                <option value="9">9 - Love of My Life</option>
+                <option value="10">10 - Good Company</option>
+                <option value="11">11 - Bohemian Rhapsody</option>
+                <option value="12">12 - God Save the Queen</option>
+                <option value="13">13 - We Are the Champions</option>
+                <option value="14">14 - We Will Rock You</option>
+            </select>
+
+            Formato:
+            <br>
+            <input type="radio" name="formato" value="mp3"> MP3
+            <input type="radio" name="formato" value="wav"> WAV
+            <input type="radio" name="formato" value="flac"> FLAC
+        </div>
+
+        <input type="submit" value="Acquista">
+
+    </form>
+
+</body>
+</html>
